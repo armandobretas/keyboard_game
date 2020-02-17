@@ -1,0 +1,23 @@
+body {
+  background-color: #e0e0e0;
+}
+
+.game {
+  height: 500px;
+  border: 1px solid black;
+  text-align:center;
+  background-color: #fff;
+}
+
+.titulo{
+    margin-top:20%;
+    color: red;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    font-size: 25px;
+    color: #fff;
+    padding-top: 27px;
+}
