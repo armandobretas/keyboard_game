@@ -4,7 +4,7 @@
 ### *Desafie seus amigos*
 - [x] Desafie seus amigos para ver quem é o mais preciso no teclado
 - [x] Bata o seu próprio recorde
-- [x] Conforme os pontos aumentam, a dificuldade aumenta também
+- [x] Conforme os pontos aumentam, a dificuldade também aumenta
 
 ### *Por que Javascript?*
 ```
