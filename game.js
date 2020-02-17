@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+  
+
   $(".titulo").click(function() {
     $(".titulo").html("3");
     setTimeout(function() { 
@@ -16,38 +19,46 @@ $(document).ready(function() {
     }, 4000);
   });
 });
+let ultimaCaracter = "";
+const fnGame = () => {  
+  let acertos = parseInt($("#acertos").text());
+  let erros = parseInt($("#erros").text());
 
-const fnGame = () => {
-  
-  const game = $(".game");
-  let pontos = parseInt($("#pontos").text());
-
-  addBox(game); 
+  addBox(); 
 
   document.onkeypress = function(evt) {
     let str = keyPressed(evt);
     let box = document.getElementById(str.toLowerCase());
     
     if (box) {
+      ultimaCaracter = str.toLowerCase()
       box.parentNode.removeChild(box);
-      $("#pontos").text(pontos += 10);
-      addBox(game)
-    }   
+      $("#acertos").text(acertos += 1);
+      addBox()
+    } else {
+      $("#erros").text(erros += 1);
+    }  
   };
 
 
 };
 
-const addBox = (game) => {
-  let letras = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","u","v","w","x","y","z"];
+const addBox = () => {
+  const game = $(".game")
+  let letras = ["a","b","c","d","e","f","g","h","1","2"];
   let backgrounds = ['success','danger','warning','info','dark','primary','secondary'];
-  let caract = letras[Math.floor(Math.random() * letras.length-1)]
-  let bg = backgrounds[ Math.floor(Math.random() * backgrounds.length-1) ];
+  let caract = letras[Math.floor(Math.random() * letras.length)]
+  let bg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
   setTimeout(function(){
-    game.html(`<div class="box bg-${bg}" id="${caract}" style="margin-left:${Math.floor(Math.random() * 1000)}px">${caract}</div>`);
-    animacao(caract);
-  },200)
- 
+    console.log(Math.floor(Math.random() * letras.length-1))
+    if (caract  == 'undefined' || caract == ultimaCaracter){
+      addBox()
+    } else {
+      game.html(`<div class="box bg-${bg}" id="${caract}" style="margin-left:${Math.floor(Math.random() * 1000)}px">${caract}</div>`);
+      animacao(caract);
+    }
+  },400)
+  
 };
 
 const animacao = (caract) => {
@@ -57,7 +68,13 @@ const animacao = (caract) => {
     if (marginTop <= 400) {
       $(`#${caract}`).css("margin-top", `${marginTop}px`);
     } else {
+      var box = document.getElementById(caract)
+      box.parentNode.removeChild(box);
       clearInterval(animacao);
+      swal('Game Over','Você perdeu, tente novamente!!!','error')
+      .then((value) => {
+        window.location.reload()
+      })
     }
   }, 100);
 };

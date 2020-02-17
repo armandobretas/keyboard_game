@@ -24,3 +24,13 @@ body {
     color: #fff;
     padding-top: 27px;
 }
+
+#erros {
+  font-weight: bolder;
+  color: red;
+}
+
+#acertos {
+  font-weight: bolder;
+  color:green;
+}
