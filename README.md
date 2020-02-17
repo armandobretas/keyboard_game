@@ -15,7 +15,7 @@ function game() {
 ```
 
 ### *Confira esse lendário game em sua magnífica forma*
-![](C:\Users\matheus.brunelli\Desktop\game\game.png)
+![](C:/Users/matheus.brunelli/Desktop/game/game.png)
 
 
 
