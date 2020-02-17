@@ -15,7 +15,7 @@ function game() {
 ```
 
 ### *Confira esse lendário game em sua magnífica forma*
-![game](https://ibb.co/H4hBTVL)
+![](https://ibb.co/H4hBTVL.png)
 
 
 
