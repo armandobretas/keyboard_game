@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $(".titulo").click(function() {
     $(".titulo").html("3");
-    setTimeout(function() {
+    setTimeout(function() { 
       $(".titulo").html("2");
     }, 1000);
     setTimeout(function() {
@@ -18,6 +18,7 @@ $(document).ready(function() {
 });
 
 const fnGame = () => {
+  
   const game = $(".game");
   let pontos = parseInt($("#pontos").text());
 
