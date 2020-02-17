@@ -5,16 +5,9 @@
 - [x] Desafie seus amigos para ver quem é o mais preciso no teclado
 - [x] Bata o seu próprio recorde
 - [x] Conforme os pontos aumentam, a dificuldade também aumenta
+ 
 
-### *Por que Javascript?*
-```
-function game() {
-  let velocidade = 'O Javascript proporciona um tempo de resposta quase nulo'
-  return velocidade
-}
-```
-
-### *Confira esse lendário game em sua magnífica forma*
+### *GIF*
 ![](https://i.ibb.co/2hZW3y0/game.png)
 
 
